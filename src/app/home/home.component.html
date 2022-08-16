@@ -1,0 +1,36 @@
+<div>
+    <div id="row2" class="row">
+        <div class="col-md-6">
+            <h3>Foot store <i class="bi bi-shop"></i></h3>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li class="items"> <input class="input" type="text" name="iname" placeholder="Search Here...">&nbsp;
+                    <button class="btn btn-primary" ng-click="show()">
+                        <span> <i class="bi bi-search" style="color: white;"></i></span>
+                    </button>
+                </li>
+                <li class="items"><a href="#">Home</a></li>
+                <li class="items"><a href="#">Account</a></li>
+                <li class="items"><a href="#">login</a></li>
+                <li class="items"><a href="#"><i class="bi bi-cart-check" (click)="store()"></i> <span
+                            class="badge badge-warning" ng-init="0">0</span></a>Cart</li>
+            </ul>
+        </div>
+    </div>
+    <div id="row1" class="row">
+        <div class="col-md-3" *ngFor="let item of nendrasys">
+            <div class="card">
+                <img [src]="item.Image" alt="image">
+                <div class="card-body">
+                    <h5>{{item.name}}</h5>
+                    <p>{{item.desc}}</p>
+                    <h5>₹{{item.price}}</h5>
+                    <i class="bi bi-heart-fill" ng-style="{'fill': clicked ==true ? 'red'; 'black'}">
+                    </i><br>
+                    <button class="btn btn-primary" (click)="store()"> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

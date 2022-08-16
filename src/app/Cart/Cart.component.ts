@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
-  templateUrl: './Cart.component.html',
-  styleUrls: ['./Cart.component.css']
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
-export class Cartcomponent implements OnInit {
-
-  carts = [];
-
+export class CartComponent implements OnInit {
+  @Input()  carts:any[] = [];
   constructor() { }
 
   ngOnInit(): void {
