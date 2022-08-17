@@ -6,8 +6,12 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 private _jsonURL='assest/product.json'
-  constructor(private Http:HttpClient) { }
-  getJson():Observable<any>{
-    return this.Http.get(this._jsonURL)
+  constructor(private Http:HttpClient) {   }
+  getProduct(){
+    return this.Http.get('http://localhost:4200/assets/product.json')
   }
+  
+  // getJson():Observable<any>{
+  //   return this.Http.get(this._jsonURL)
+  // }
 }

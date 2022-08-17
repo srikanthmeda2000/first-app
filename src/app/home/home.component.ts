@@ -7,22 +7,23 @@ import { ApiService } from '../service/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  nendrasys : any=[];
-
-  constructor(private api:ApiService) { }
+  product: any;
+ 
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-   this.getProduct()
+    this.api.getProduct()
+      .subscribe(res => {
+        this.product = res;
+        console.log(this.product);
+      })
   }
-  getProduct(){
-    this.api.getJson().subscribe(resp=>{
-      this.nendrasys=resp
-    })
-  }
- 
-  cart = [{}];  
+  cart: any;
   store() {
-    this.cart.push([{ name: String,id:Number,desc:String, Image: String, price: Number }]);
+    this.api.getProduct().subscribe(res => {
+      this.cart =res;
+    });
     console.log(this.cart);
   }
+
 }

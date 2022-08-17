@@ -1,19 +1,13 @@
-h3{
-    font-style:italic ;
-    margin-left: 2%;
-    margin-top: 1%;
-    /* display: inline-flex; */
+.cartImag{
+    width: 150px;
+    height: 120px;
+    margin-top: 5%;
+    margin-left: 20%;
+    text-align: center;
 }
-#row2{
-    background-color: antiquewhite;
-}
-.items{
- padding-top: 2%;
-}
-li,a{
- text-decoration: none;
- list-style-type: none;
- display: inline-flex; 
- padding-left: 3%;
-
+#cardHead{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 300px;
+    height: 350px;
 }

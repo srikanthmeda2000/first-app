@@ -1,52 +1,17 @@
-<p>cart works!</p>
-<div>
-    <div class="row">
-      <div class="col-md-6">
-        <h3><i class="bi bi-shop"></i>Dream Cart</h3>
+<div class="body">
+    <div class="row main-row">
+      <div class="col-md-3" *ngFor="let cart of carts">
+        <div id="cardHead" class="card">
+          <img class="cartImag" [src]="cart.Image" alt="image">
+          <div class="card-body">
+            <h5>{{cart.name}}</h5>
+            <p>{{cart.desc}}</p>
+            <h5>{{cart.price}}</h5>
+            <i class="bi bi-heart-fill" ng-style="{'fill': clicked ==true ? 'red'; 'black'}">
+            </i><br>
+            <button class="btn btn-danger"> Buy Now</button>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <ul>
-          <li class="items"> <input class="input" type="text" name="search" ng-model="searchText"
-              placeholder="Search Here...">&nbsp;
-            <button class="btn btn-primary" ng-click="show()">
-              <span> <i class="bi bi-search" style="color: white;"></i></span>
-            </button>
-          </li>
-          <li class="items"><a href="#">Home</a></li>
-          <li class="items"><a href="#">Account</a></li>
-          <li class="items"><a href="#">login</a></li>
-          <li class="items"><a href="#"><i class="bi bi-cart-check"></i>Cart</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="body">
-        <main>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>Name</td>
-                        <td>Image</td>
-                        <td>Quntity</td>
-                        <td>Price</td> 
-                    </tr>
-                </thead>
-            </table>
-            <div  class="row main-row">
-              <div class="col-md-3" *ngFor="let cart of carts">
-                <div class="card">
-                  <img [src]="cart.Image" alt="image">
-                  <div class="card-body">
-                    <h5>{{cart.name}}</h5>
-                    <p>{{cart.desc}}</p>
-                    <h5>{{cart.price}}</h5>
-                    <i class="bi bi-heart-fill" ng-style="{'fill': clicked ==true ? 'red'; 'black'}">
-                    </i><br>
-                      <button class="btn btn-danger"> Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </main>
     </div>
 </div>

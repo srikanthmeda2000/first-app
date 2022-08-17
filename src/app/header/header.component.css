@@ -1,0 +1,19 @@
+h3{
+    font-style:italic ;
+    margin-left: 2%;
+    margin-top: 1%;
+    /* display: inline-flex; */
+}
+.header{
+    background-color: antiquewhite;
+}
+.items{
+ padding-top: 2%;
+}
+li,a{
+ text-decoration: none;
+ list-style-type: none;
+ display: inline-flex; 
+ padding-left: 3%;
+
+}
